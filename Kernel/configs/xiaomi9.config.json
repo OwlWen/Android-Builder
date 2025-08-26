@@ -1,9 +1,9 @@
 [
   {
     "kernelSource": {
-      "name": "Xiaomi-mix2_Crdroid-Kernel-15",
-      "repo": "https://github.com/crdroidandroid/android_kernel_xiaomi_msm8998",
-      "branch": "15.0",
+      "name": "Xiaomi-mix2_mokee10",
+      "repo": "https://github.com/MoKee/android_kernel_xiaomi_msm8998",
+      "branch": "mkq",
       "device": "chiron",
       "defconfig": "chiron_defconfig"
     },
@@ -29,7 +29,7 @@
       "use": true,
       "release": true
     },
-    "enableKernelSU": true,
+    "enableKernelSU": false,
     "enableLXC": true
   }
 ]
