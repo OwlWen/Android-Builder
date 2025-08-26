@@ -1,11 +1,11 @@
 [
   {
     "kernelSource": {
-      "name": "Xiaomi9KernelPoweredBySeparate",
-      "repo": "https://github.com/Separatee/AllinOneKernel",
-      "branch": "main",
-      "device": "cepheus",
-      "defconfig": "cepheus_defconfig"
+      "name": "Xiaomimix2KernelPoweredBySeparate",
+      "repo": "https://github.com/crdroidandroid/android_kernel_xiaomi_msm8998",
+      "branch": "15.0",
+      "device": "chiron",
+      "defconfig": "chiron_defconfig"
     },
     "toolchains": [
       {
@@ -30,6 +30,6 @@
       "release": true
     },
     "enableKernelSU": false,
-    "enableLXC": false
+    "enableLXC": true
   }
 ]
