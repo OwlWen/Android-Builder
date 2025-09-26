@@ -1,11 +1,11 @@
 [
   {
     "kernelSource": {
-      "name": "Mix2",
-      "repo": "https://github.com/MoKee/android_kernel_xiaomi_msm8998",
-      "branch": "mkq",
-      "device": "chiron",
-      "defconfig": "chiron_defconfig"
+      "name": "OnePlus8",
+      "repo": "https://github.com/crdroidandroid/android_kernel_oneplus_sm8250",
+      "branch": "12L",
+      "device": "op8",
+      "defconfig": "op8-perf_defconfig"
     },
     "toolchains": [
       {
@@ -59,7 +59,7 @@
       "use": true,
       "release": true
     },
-    "enableKernelSU": false,
+    "enableKernelSU": true,
     "enableLXC": true
   }
 ]
