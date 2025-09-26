@@ -2,10 +2,10 @@
   {
     "kernelSource": {
       "name": "OnePlus8",
-      "repo": "https://github.com/crdroidandroid/android_kernel_oneplus_sm8250",
-      "branch": "12L",
-      "device": "op8",
-      "defconfig": "op8-perf_defconfig"
+      "repo": "https://github.com/ppajda/android_kernel_oneplus_sm8250",
+      "branch": "oos12",
+      "device": "xtd",
+      "defconfig": "xtd_defconfig"
     },
     "toolchains": [
       {
