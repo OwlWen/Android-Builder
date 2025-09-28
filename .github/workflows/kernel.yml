@@ -130,6 +130,7 @@ jobs:
         run: |
           git clone --recursive --depth=1 -j $(nproc) --branch ${{ env.KERNEL_BRANCH }} ${{ env.KERNEL_REPO }} ${{ env.KERNEL_NAME }}
           cd ${{ env.KERNEL_NAME }}
+          git fetch --depth=100
           git checkout 901fe2464501cadde2b1943ad117e25a265eb401
           cd ../
           # tree ${{ env.KERNEL_NAME }}
