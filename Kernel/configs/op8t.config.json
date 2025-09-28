@@ -12,12 +12,18 @@
       {
         "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
         "branch": "master",
-        "name": "gas"
+        "name": "gas",
+        "binaryEnv": [
+                    "bin"
+                ]
       },
       {
         "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone/",
         "branch": "11",
-        "name": "clang"
+        "name": "clang",
+        "binaryEnv": [
+                    "bin"
+                ]
       }
     ],
     "params": {
