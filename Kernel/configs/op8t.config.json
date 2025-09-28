@@ -9,11 +9,13 @@
     },
     "toolchains": [
       {
-        "name": "proton-clang",
-        "repo": "https://github.com/kdrag0n/proton-clang",
-        "branch": "master",
-        "binaryEnv": ["./bin"]
-      }
+          "repo": "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b",
+          "branch": "lineage-20.0",
+          "name": "clang",
+          "binaryEnv": [
+              "bin"
+          ]
+      },
     ],
     "enableCcache": true,
     "params": {
