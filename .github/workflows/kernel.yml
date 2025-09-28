@@ -306,13 +306,10 @@ jobs:
           args=(
             -j$(nproc --all)
             O=/home/runner/work/Android-Builder/Android-Builder/out
-            CC=clang
             ARCH=arm64
+            CROSS_COMPILE=aarch64-linux-android-
             CLANG_TRIPLE=aarch64-linux-gnu-
-            CROSS_COMPILE=aarch64-linux-gnu-
-            CROSS_COMPILE_COMPAT=arm-linux-gnueabi-
             LLVM=1
-            LLVM_IAS=1
           )
           make "${args[@]}" vendor/kona-perf_defconfig
           make "${args[@]}"
