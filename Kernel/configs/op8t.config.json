@@ -12,7 +12,15 @@
       {
         "repo": "https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r547379",
         "branch": "15.0",
-        "name": "crdroidandroid",
+        "name": "crdroidandroid_clang",
+        "binaryEnv": [
+                    "bin"
+                ]
+      },
+      {
+        "repo": "https://gitlab.com/crdroidandroid/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9",
+        "branch": "15.0",
+        "name": "crdroidandroid_gcc",
         "binaryEnv": [
                     "bin"
                 ]
