@@ -304,7 +304,8 @@ jobs:
           export KBUILD_BUILD_HOST=Github-Action
           export KBUILD_BUILD_USER=$(echo ${{ github.actor }} | tr A-Z a-z)
           export LD_LIBRARY_PATH=/home/runner/work/Android-Builder/Android-Builder/crdroidandroid_clang/lib:$LD_LIBRARY_PATH
-          export ARGS_=LD_LIBRARY_PATH=$LD_LIBRARY_PATH -j$(nproc --all) O=/home/runner/work/Android-Builder/Android-Builder/out ARCH=arm64 CROSS_COMPILE=aarch64-linux-android- CLANG_TRIPLE=aarch64-linux-gnu- LLVM=1
+          echo "🤔 LD_LIBRARY_PATH Variable: $LD_LIBRARY_PATH"
+          export ARGS_=LD_LIBRARY_PATH=$LD_LIBRARY_PATH -j $(nproc --all) O=/home/runner/work/Android-Builder/Android-Builder/out ARCH=arm64 CROSS_COMPILE=aarch64-linux-android- CLANG_TRIPLE=aarch64-linux-gnu- LLVM=1
           make $ARGS_ vendor/kona-perf_defconfig
           make $ARGS_
           #make ${{ env.ARGS }} ${{ env.KERNEL_DEFCONFIG_PATH }}
