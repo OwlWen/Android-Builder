@@ -200,8 +200,8 @@ jobs:
           ARCH=$(echo $PARAMS | jq -r ".ARCH")
           CC=$(echo $PARAMS | jq -r ".CC")
 
-          #args="-j${{ env.THREAD }} O=${{ env.OUT_DIR }} ARCH=$ARCH"
-          args="-j 1 O=${{ env.OUT_DIR }} ARCH=$ARCH EXTRA_CFLAGS=\"-Wno-error=address-of-packed-member\""
+          args="-j${{ env.THREAD }} O=${{ env.OUT_DIR }} ARCH=$ARCH"
+          #args="-j 1 O=${{ env.OUT_DIR }} ARCH=$ARCH EXTRA_CFLAGS=\"-Wno-error=address-of-packed-member\""
           if [ -n "$CC" ]; then
 
             if [[ "$CC" == *"/"* ]]; then
