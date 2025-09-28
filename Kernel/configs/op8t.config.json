@@ -1,26 +1,18 @@
 [
   {
     "kernelSource": {
-      "name": "OnePlus-8t_Crdroid-Kernel-13",
+      "name": "OnePlus-8t_Crdroid-Kernel-15",
       "repo": "https://github.com/crdroidandroid/android_kernel_oneplus_sm8250",
-      "branch": "13.0",
+      "branch": "15.0",
       "device": "kona",
       "defconfig": "vendor/kona-perf_defconfig"
     },
     "enableCcache": false,
         "toolchains": [
       {
-        "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
-        "branch": "master",
-        "name": "gas",
-        "binaryEnv": [
-                    "bin"
-                ]
-      },
-      {
-        "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone/",
-        "branch": "11",
-        "name": "clang",
+        "repo": "https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r547379",
+        "branch": "15.0",
+        "name": "crdroidandroid",
         "binaryEnv": [
                     "bin"
                 ]
@@ -51,7 +43,7 @@
       "use": true,
       "release": true
     },
-    "enableKernelSU": true,
-    "enableLXC": true
+    "enableKernelSU": false,
+    "enableLXC": false
   }
 ]
