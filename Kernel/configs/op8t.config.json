@@ -3,7 +3,7 @@
     "kernelSource": {
       "name": "OnePlus-8t_Crdroid-Kernel-12",
       "repo": "https://github.com/crdroidandroid/android_kernel_oneplus_sm8250",
-      "branch": "12.1",
+      "branch": "13.0",
       "device": "kona",
       "defconfig": "vendor/kona-perf_defconfig"
     },
