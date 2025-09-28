@@ -7,8 +7,8 @@
       "device": "kona",
       "defconfig": "vendor/kona-perf_defconfig"
     },
-    "enableCcache": false,
-        "toolchains": [
+    "enableCcache": true,
+    "toolchains": [
       {
         "repo": "https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r547379",
         "branch": "15.0",
@@ -43,7 +43,7 @@
       "use": true,
       "release": true
     },
-    "enableKernelSU": false,
-    "enableLXC": false
+    "enableKernelSU": true,
+    "enableLXC": true
   }
 ]
