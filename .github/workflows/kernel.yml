@@ -129,7 +129,9 @@ jobs:
       - name: 🌟 Clone kernel source => (${{ env.KERNEL_REPO }})
         run: |
           git clone --recursive --depth=1 -j $(nproc) --branch ${{ env.KERNEL_BRANCH }} ${{ env.KERNEL_REPO }} ${{ env.KERNEL_NAME }}
+          cd ${{ env.KERNEL_NAME }}
           git checkout 901fe2464501cadde2b1943ad117e25a265eb401
+          cd ../
           # tree ${{ env.KERNEL_NAME }}
 
       - name: 💫 Get toolchains
