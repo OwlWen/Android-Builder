@@ -303,8 +303,21 @@ jobs:
           echo "🤔 PATH Variable: $PATH"
           export KBUILD_BUILD_HOST=Github-Action
           export KBUILD_BUILD_USER=$(echo ${{ github.actor }} | tr A-Z a-z)
-          make ${{ env.ARGS }} ${{ env.KERNEL_DEFCONFIG_PATH }}
-          make ${{ env.ARGS }} ${{ env.KERNEL_DEFCONFIG_PATH }}
+          args=(
+            -j$(nproc --all)
+            O=/home/runner/work/Android-Builder/Android-Builder/out
+            CC=clang
+            ARCH=arm64
+            CLANG_TRIPLE=aarch64-linux-gnu-
+            CROSS_COMPILE=aarch64-linux-gnu-
+            CROSS_COMPILE_COMPAT=arm-linux-gnueabi-
+            LLVM=1
+            LLVM_IAS=1
+          )
+          make "${args[@]}" vendor/kona-perf_defconfig
+          make "${args[@]}"
+          #make ${{ env.ARGS }} ${{ env.KERNEL_DEFCONFIG_PATH }}
+          #make ${{ env.ARGS }}
           # make ${{ env.ARGS }}
           # tree ${{ env.OUT_DIR }}
 
