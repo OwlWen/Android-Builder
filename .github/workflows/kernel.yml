@@ -180,7 +180,7 @@ jobs:
               toolchain_repo=$(echo $toolchain | jq -r ".repo")
               toolchain_branch=$(echo $toolchain | jq -r ".branch")
               git clone --recursive --depth=1 -j $(nproc) --branch $toolchain_branch $toolchain_repo $toolchain_name
-              
+
               echo "🤔 Clone $toolchain_name => ($toolchain_repo)"
             fi
 
@@ -201,7 +201,6 @@ jobs:
           CC=$(echo $PARAMS | jq -r ".CC")
 
           args="-j${{ env.THREAD }} O=${{ env.OUT_DIR }} ARCH=$ARCH"
-          #args="-j 1 O=${{ env.OUT_DIR }} ARCH=$ARCH EXTRA_CFLAGS=\"-Wno-error=address-of-packed-member\""
           if [ -n "$CC" ]; then
 
             if [[ "$CC" == *"/"* ]]; then
@@ -303,11 +302,8 @@ jobs:
           echo "🤔 PATH Variable: $PATH"
           export KBUILD_BUILD_HOST=Github-Action
           export KBUILD_BUILD_USER=$(echo ${{ github.actor }} | tr A-Z a-z)
-          export LD_LIBRARY_PATH=/home/runner/work/Android-Builder/Android-Builder/crdroidandroid_clang/lib
-          make -v -j1 LD_LIBRARY_PATH=/home/runner/work/Android-Builder/Android-Builder/crdroidandroid_clang/lib O=/home/runner/work/Android-Builder/Android-Builder/out ARCH=arm64 EXTRA_CFLAGS="-Wno-error=address-of-packed-member" CC=clang CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-android- LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump READELF=llvm-readelf OBJSIZE=llvm-size STRIP=llvm-strip LDGOLD=aarch64-linux-gnu-ld.gold LLVM_AR=llvm-ar LLVM_DIS=llvm-dis CONFIG_THINLTO= vendor/kona-perf_defconfig
-          make -v -j1 LD_LIBRARY_PATH=/home/runner/work/Android-Builder/Android-Builder/crdroidandroid_clang/lib O=/home/runner/work/Android-Builder/Android-Builder/out ARCH=arm64 EXTRA_CFLAGS="-Wno-error=address-of-packed-member" CC=clang CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-android- LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump READELF=llvm-readelf OBJSIZE=llvm-size STRIP=llvm-strip LDGOLD=aarch64-linux-gnu-ld.gold LLVM_AR=llvm-ar LLVM_DIS=llvm-dis CONFIG_THINLTO=
-          #make ${{ env.ARGS }}
-          # make ${{ env.ARGS }}
+          make ${{ env.ARGS }} ${{ env.KERNEL_DEFCONFIG_PATH }}
+          make ${{ env.ARGS }}
           # tree ${{ env.OUT_DIR }}
 
       - name: 💛 Upload Image
