@@ -1,9 +1,9 @@
 [
     {
         "kernelSource": {
-            "name": "OP8T_15",
-            "repo": "https://github.com/LineageOS/android_kernel_oneplus_sm8250",
-            "branch": "lineage-22.2",
+            "name": "OP8T_14_CRDROID",
+            "repo": "https://github.com/crdroidandroid/android_kernel_oneplus_sm8250",
+            "branch": "14.0",
             "device": "kona",
             "defconfig": "vendor/kona-perf_defconfig"
         },
