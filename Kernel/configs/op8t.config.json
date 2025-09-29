@@ -1,7 +1,7 @@
 [
     {
         "kernelSource": {
-            "name": "OP8T_13",
+            "name": "OP8T_14",
             "repo": "https://github.com/LineageOS/android_kernel_oneplus_sm8250",
             "branch": "lineage-21",
             "device": "kona",
